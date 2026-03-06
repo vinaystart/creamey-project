@@ -1,0 +1,147 @@
+/* ===== Global Background ===== */
+.auth-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Main Card ===== */
+.auth-card {
+  width: 900px;
+  max-width: 95%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Auth Sections ===== */
+.auth-section {
+  width: 50%;
+  padding: 60px 50px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.6s ease;
+}
+
+/* ===== Signup Hidden Initially ===== */
+.auth-section.signup {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+}
+
+/* ===== Signup Visible ===== */
+.auth-section.signup.show {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+}
+
+/* ===== Headings ===== */
+.auth-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.text-muted {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* ===== Inputs ===== */
+.auth-input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* ===== Buttons ===== */
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.auth-btn.primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+}
+
+.auth-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Success Button */
+.auth-btn.success {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: #fff;
+}
+
+.auth-btn.success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(67, 206, 162, 0.4);
+}
+
+/* ===== Switch Text ===== */
+.switch-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.switch-text span {
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.switch-text span:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .auth-card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .auth-section,
+  .auth-section.signup {
+    width: 100%;
+    position: relative;
+    transform: none;
+    opacity: 1;
+    pointer-events: all;
+  }
+}

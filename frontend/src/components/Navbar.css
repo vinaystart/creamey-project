@@ -1,0 +1,51 @@
+/* LOCK NAVBAR HEIGHT */
+.navbar {
+  height: 70px;              /* 🔒 fixed height */
+  padding: 0 0.75rem;
+}
+
+/* BRAND */
+.navbar-brand {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* LOGO ZOOM (without changing navbar height) */
+.dairy-logo {
+  height: 28px;              /* base size */
+  width: auto;
+  object-fit: contain;
+  transform: scale(0.7);     /* 🔥 zoom effect */
+  transform-origin: left center;
+}
+
+/* BRAND TEXT */
+.navbar-brand span {
+  line-height: 1;
+}
+
+/* CART BADGE */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -12px;
+  background: #dc3545;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbar {
+    height: 52px;
+  }
+
+  .dairy-logo {
+    transform: scale(1.25);
+  }
+}
